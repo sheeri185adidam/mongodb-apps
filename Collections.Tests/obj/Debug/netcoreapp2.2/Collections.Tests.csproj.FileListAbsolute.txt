@@ -1,0 +1,17 @@
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/Collections.Tests.deps.json
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/Collections.Tests.runtimeconfig.json
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/Collections.Tests.runtimeconfig.dev.json
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/Collections.Tests.dll
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/Collections.Tests.pdb
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/Collections.dll
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/bin/Debug/netcoreapp2.2/Collections.pdb
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/obj/Debug/netcoreapp2.2/Collections.Tests.csprojAssemblyReference.cache
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/obj/Debug/netcoreapp2.2/Collections.Tests.csproj.CoreCompileInputs.cache
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/obj/Debug/netcoreapp2.2/Collections.Tests.AssemblyInfoInputs.cache
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/obj/Debug/netcoreapp2.2/Collections.Tests.AssemblyInfo.cs
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/obj/Debug/netcoreapp2.2/Collections.Tests.csproj.CopyComplete
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/obj/Debug/netcoreapp2.2/Collections.Tests.dll
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/obj/Debug/netcoreapp2.2/Collections.Tests.pdb

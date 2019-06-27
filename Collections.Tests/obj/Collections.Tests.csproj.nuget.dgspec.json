@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/Collections.Tests.csproj": {}
+  },
+  "projects": {
+    "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/Collections.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/Collections.Tests.csproj",
+        "projectName": "Collections.Tests",
+        "projectPath": "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/Collections.Tests.csproj",
+        "packagesPath": "/home/ninkasi/.nuget/packages/",
+        "outputPath": "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/ninkasi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/Collections.csproj": {
+                "projectPath": "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/Collections.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.9.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.driver": {
+              "target": "Package",
+              "version": "[2.8.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
+            "nunit": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/Collections.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/Collections.csproj",
+        "projectName": "Collections",
+        "projectPath": "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/Collections.csproj",
+        "packagesPath": "/home/ninkasi/.nuget/packages/",
+        "outputPath": "/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/ninkasi/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.8.1, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

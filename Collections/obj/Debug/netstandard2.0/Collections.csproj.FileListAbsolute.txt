@@ -1,0 +1,9 @@
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/bin/Debug/netstandard2.0/Collections.deps.json
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/bin/Debug/netstandard2.0/Collections.dll
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/bin/Debug/netstandard2.0/Collections.pdb
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/obj/Debug/netstandard2.0/Collections.csprojAssemblyReference.cache
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/obj/Debug/netstandard2.0/Collections.csproj.CoreCompileInputs.cache
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/obj/Debug/netstandard2.0/Collections.AssemblyInfoInputs.cache
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/obj/Debug/netstandard2.0/Collections.AssemblyInfo.cs
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/obj/Debug/netstandard2.0/Collections.dll
+/home/ninkasi/workspace/dotnet/MongoDbApp/Collections/obj/Debug/netstandard2.0/Collections.pdb
