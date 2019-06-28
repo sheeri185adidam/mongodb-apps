@@ -7,13 +7,8 @@ namespace Collections
     /// </summary>
     /// <typeparam name="TKey"></typeparam>
     /// <typeparam name="TValue"></typeparam>
-    public interface IKeyValueCollection<TKey, TValue>
+    public interface IKeyValueCollection<TKey, TValue> : ICollection
     {
-        /// <summary>
-        /// Gets the name of the collection
-        /// </summary>
-        string Name {get;}
-
         /// <summary>
         /// Gets an enumerable to the keys in the collection
         /// </summary>

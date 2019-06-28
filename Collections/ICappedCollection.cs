@@ -7,17 +7,12 @@ namespace Collections
     /// Interface for capped collection
     /// </summary>
     /// <typeparam name="TValue">A generic type</typeparam>
-    public interface ICappedCollection<TValue>
+    public interface ICappedCollection<TValue> : ICollection
     {
         /// <summary>
         /// Number of documents in the collection
         /// </summary>
         int Count {get;}
-
-        /// <summary>
-        /// Name of the collection
-        /// </summary>
-        string Name {get;}
 
         /// <summary>
         /// Gets the value at the specified index
