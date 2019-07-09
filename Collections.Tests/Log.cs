@@ -1,8 +1,8 @@
 namespace Tests
 {
-        public abstract class Transaction
+        public abstract class Log
         {
-            protected Transaction(long transactionId, long logSequence, 
+            protected Log(long transactionId, long logSequence, 
                 int gameId, int denomId, string gameName)
             {
                 TransactionId = transactionId;
@@ -30,7 +30,7 @@ namespace Tests
                 }
                 
                 // TODO: write your implementation of Equals() here
-                var compare = (Transaction) obj;
+                var compare = (Log) obj;
                 return TransactionId == compare.TransactionId
                         && LogSequence == compare.LogSequence
                         && GameId == compare.GameId

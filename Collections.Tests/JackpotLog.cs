@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Tests
 {
-    public class JackpotTransaction : Transaction
+    public class JackpotLog: Log
     {
-        public JackpotTransaction(long transactionId, long jackpotId, long logSequence,
+        public JackpotLog(long transactionId, long jackpotId, long logSequence,
             int gameId, int denomId, string gameName)
             : base(transactionId, logSequence, gameId, denomId, gameName)
         {
@@ -23,7 +23,7 @@ namespace Tests
                 return false;
             }
             
-            var compared = (JackpotTransaction) obj;
+            var compared = (JackpotLog) obj;
             return base.Equals(obj)
                     && JackpotId == compared.JackpotId
                     && JackpotValue == compared.JackpotValue
@@ -43,9 +43,9 @@ namespace Tests
                     $"JackpotPrizeText: {JackpotPrizeText}";
         }
 
-        public static JackpotTransaction Randomize(Random random)
+        public static JackpotLog Randomize(Random random)
         {
-            return new JackpotTransaction(
+            return new JackpotLog(
                 random.Next(1, 10000),
                 random.Next(1, 10000),
                 random.Next(1, 10000),

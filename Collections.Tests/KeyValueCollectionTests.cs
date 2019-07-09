@@ -38,28 +38,28 @@ namespace Tests
         [Test]
         public void TestConstructor_AllArgumentsAreNull()
         {
-            Assert.Throws<ArgumentNullException>(()=>new KeyValueCollection<string, JackpotTransaction>(null, null));
+            Assert.Throws<ArgumentNullException>(()=>new KeyValueCollection<string, JackpotLog>(null, null));
         }
 
         [Test]
         public void TestConstructor_DatabaseArgumentIsNull()
         {
-            Assert.Throws<ArgumentNullException>(()=>new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", null));
+            Assert.Throws<ArgumentNullException>(()=>new KeyValueCollection<string, JackpotLog>(@"TestCollection", null));
         }
 
         [Test]
         public void TestConstructor_ValidArguments()
         {
-            Assert.DoesNotThrow(()=>new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database), null);
+            Assert.DoesNotThrow(()=>new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database), null);
         }
 
         [Test]
         public void TestAdd_SingleKeyValue()
         {
             var key = @"TestKey";
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction = JackpotTransaction.Randomize(new Random());
+            var transaction = JackpotLog.Randomize(new Random());
             collection.Add(key, transaction);
 
             Assert.IsTrue(collection.TryGetValue(key, out var result));
@@ -73,11 +73,11 @@ namespace Tests
             var key2 = @"TestKey2";
             var key3 = @"TestKey3";
 
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction1 = JackpotTransaction.Randomize(new Random());
-            var transaction2 = JackpotTransaction.Randomize(new Random());
-            var transaction3 = JackpotTransaction.Randomize(new Random());
+            var transaction1 = JackpotLog.Randomize(new Random());
+            var transaction2 = JackpotLog.Randomize(new Random());
+            var transaction3 = JackpotLog.Randomize(new Random());
 
             collection.Add(key1, transaction1);
             collection.Add(key2, transaction2);
@@ -96,9 +96,9 @@ namespace Tests
         public void TestAdd_DuplicateKeyValue()
         {
             var key = @"TestKey";
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction = JackpotTransaction.Randomize(new Random());
+            var transaction = JackpotLog.Randomize(new Random());
             collection.Add(key, transaction);
 
             Assert.Throws<ArgumentException>(()=>collection.Add(key, transaction));
@@ -107,7 +107,7 @@ namespace Tests
         [Test]
         public void TestClear_EmptyCollection()
         {
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
             collection.Clear();
         }
 
@@ -118,11 +118,11 @@ namespace Tests
             var key2 = @"TestKey2";
             var key3 = @"TestKey3";
 
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction1 = JackpotTransaction.Randomize(new Random());
-            var transaction2 = JackpotTransaction.Randomize(new Random());
-            var transaction3 = JackpotTransaction.Randomize(new Random());
+            var transaction1 = JackpotLog.Randomize(new Random());
+            var transaction2 = JackpotLog.Randomize(new Random());
+            var transaction3 = JackpotLog.Randomize(new Random());
 
             collection.Add(key1, transaction1);
             collection.Add(key2, transaction2);
@@ -144,9 +144,9 @@ namespace Tests
         public void TestContainsKey_SingleKeyExists()
         {
             var key = @"TestKey";
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction = JackpotTransaction.Randomize(new Random());
+            var transaction = JackpotLog.Randomize(new Random());
             collection.Add(key, transaction);
 
             Assert.IsTrue(collection.ContainsKey(key));
@@ -159,11 +159,11 @@ namespace Tests
             var key2 = @"TestKey2";
             var key3 = @"TestKey3";
 
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction1 = JackpotTransaction.Randomize(new Random());
-            var transaction2 = JackpotTransaction.Randomize(new Random());
-            var transaction3 = JackpotTransaction.Randomize(new Random());
+            var transaction1 = JackpotLog.Randomize(new Random());
+            var transaction2 = JackpotLog.Randomize(new Random());
+            var transaction3 = JackpotLog.Randomize(new Random());
 
             collection.Add(key1, transaction1);
             collection.Add(key2, transaction2);
@@ -178,7 +178,7 @@ namespace Tests
         public void TestRemoveKey_EmptyCollection()
         {
             var key = @"TestKey";
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
             Assert.IsFalse(collection.Remove(key));
         }
 
@@ -186,8 +186,8 @@ namespace Tests
         public void TestRemoveKey_KeyExists()
         {
             var key = @"TestKey";
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
-            var transaction = JackpotTransaction.Randomize(new Random());
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
+            var transaction = JackpotLog.Randomize(new Random());
             collection.Add(key, transaction);
 
             Assert.IsTrue(collection.Remove(key));
@@ -197,7 +197,7 @@ namespace Tests
         public void TestRemoveKey_KeyDoesNotExist()
         {
             var key = @"TestKey";
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
             Assert.IsFalse(collection.Remove(key));
         }
 
@@ -205,7 +205,7 @@ namespace Tests
         public void TestIndexer_EmptyCollection()
         {
             var key = @"TestKey";
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
             Assert.Throws<KeyNotFoundException>(() => 
             {
                 var result = collection[key];
@@ -216,8 +216,8 @@ namespace Tests
         public void TestIndexer_SingleKeyValue()
         {
             var key = @"TestKey";
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
-            var transaction = JackpotTransaction.Randomize(new Random());
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
+            var transaction = JackpotLog.Randomize(new Random());
 
             collection[key] = transaction;
             var result = collection[key];
@@ -231,11 +231,11 @@ namespace Tests
             var key2 = @"TestKey2";
             var key3 = @"TestKey3";
 
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction1 = JackpotTransaction.Randomize(new Random());
-            var transaction2 = JackpotTransaction.Randomize(new Random());
-            var transaction3 = JackpotTransaction.Randomize(new Random());
+            var transaction1 = JackpotLog.Randomize(new Random());
+            var transaction2 = JackpotLog.Randomize(new Random());
+            var transaction3 = JackpotLog.Randomize(new Random());
 
             collection[key1] = transaction1;
             collection[key2] = transaction2;
@@ -253,11 +253,11 @@ namespace Tests
             var key2 = @"TestKey2";
             var key3 = @"TestKey3";
 
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction1 = JackpotTransaction.Randomize(new Random());
-            var transaction2 = JackpotTransaction.Randomize(new Random());
-            var transaction3 = JackpotTransaction.Randomize(new Random());
+            var transaction1 = JackpotLog.Randomize(new Random());
+            var transaction2 = JackpotLog.Randomize(new Random());
+            var transaction3 = JackpotLog.Randomize(new Random());
 
             collection[key1] = transaction1;
             collection[key2] = transaction2;
@@ -276,11 +276,11 @@ namespace Tests
             var key2 = @"TestKey2";
             var key3 = @"TestKey3";
 
-            var collection = new KeyValueCollection<string, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<string, JackpotLog>(@"TestCollection", _database);
 
-            var transaction1 = JackpotTransaction.Randomize(new Random());
-            var transaction2 = JackpotTransaction.Randomize(new Random());
-            var transaction3 = JackpotTransaction.Randomize(new Random());
+            var transaction1 = JackpotLog.Randomize(new Random());
+            var transaction2 = JackpotLog.Randomize(new Random());
+            var transaction3 = JackpotLog.Randomize(new Random());
 
             collection[key1] = transaction1;
             collection[key2] = transaction2;
@@ -296,7 +296,7 @@ namespace Tests
         public void TestCustomKeyType()
         {
             var key = new TestKeyType{ Name= @"mongo", Code=100};
-            var collection = new KeyValueCollection<TestKeyType, JackpotTransaction>(@"TestCollection", _database);
+            var collection = new KeyValueCollection<TestKeyType, JackpotLog>(@"TestCollection", _database);
         }
     }
 }
